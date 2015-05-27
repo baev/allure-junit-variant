@@ -44,7 +44,7 @@
         <dependency>
             <groupId>com.github.detro.ghostdriver</groupId>
             <artifactId>phantomjsdriver</artifactId>
-            <version>1.0.4</version>
+            <version>1.1.0</version>
         </dependency>
         <dependency>
             <groupId>ru.yandex.qatools.matchers</groupId>
@@ -125,6 +125,17 @@
                         <phase>test</phase>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>ru.yandex.qatools.tms</groupId>
+                <artifactId>testpalm-maven-plugin</artifactId>
+                <version>2.0-SNAPSHOT</version>
+                <configuration>
+                    <endpoint>http://tms-test.yandex-team.ru</endpoint>
+                    <token>cc028c7f-a3e1-41ac-9962-0cb6ad1b0288</token>
+                    <packageName>my.company</packageName>
+                    <testpalmProjectId>demo3</testpalmProjectId>
+                </configuration>
             </plugin>
         </plugins>
     </build>
